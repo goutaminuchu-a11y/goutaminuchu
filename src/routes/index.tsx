@@ -1,29 +1,59 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Background } from "@/components/portfolio/Background";
+import { Nav } from "@/components/portfolio/Nav";
+import { ScrollProgress } from "@/components/portfolio/ScrollProgress";
+import { Hero } from "@/components/portfolio/sections/Hero";
+import { About } from "@/components/portfolio/sections/About";
+import { Experience } from "@/components/portfolio/sections/Experience";
+import { Skills } from "@/components/portfolio/sections/Skills";
+import { Projects } from "@/components/portfolio/sections/Projects";
+import { Education } from "@/components/portfolio/sections/Education";
+import { Certifications } from "@/components/portfolio/sections/Certifications";
+import { Achievements } from "@/components/portfolio/sections/Achievements";
+import { Contact } from "@/components/portfolio/sections/Contact";
+import { Footer } from "@/components/portfolio/sections/Footer";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Your App" },
-      { name: "description", content: "Replace this with a one-sentence description of your app." },
-      { property: "og:title", content: "Your App" },
-      { property: "og:description", content: "Replace this with a one-sentence description of your app." },
+      { title: "Gouthami Nurchu — Software, AI & Cloud Engineer" },
+      {
+        name: "description",
+        content:
+          "Portfolio of Gouthami Nurchu — software engineer, AI engineer, and cloud enthusiast. Building products at the intersection of AI, cloud, and elegant interfaces.",
+      },
+      { property: "og:title", content: "Gouthami Nurchu — Software, AI & Cloud Engineer" },
+      {
+        property: "og:description",
+        content: "Portfolio of Gouthami Nurchu — AI, cloud, and full-stack engineering.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen">
+      <Background />
+      <ScrollProgress />
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Education />
+        <Certifications />
+        <Achievements />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
