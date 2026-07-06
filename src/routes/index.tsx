@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Toaster } from "sonner";
 import { Background } from "@/components/portfolio/Background";
 import { Nav } from "@/components/portfolio/Nav";
 import { ScrollProgress } from "@/components/portfolio/ScrollProgress";
+import { CommandPalette } from "@/components/portfolio/CommandPalette";
 import { Hero } from "@/components/portfolio/sections/Hero";
 import { About } from "@/components/portfolio/sections/About";
 import { Experience } from "@/components/portfolio/sections/Experience";
@@ -16,16 +18,16 @@ import { Footer } from "@/components/portfolio/sections/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Gouthami Nurchu — Software, AI & Cloud Engineer" },
+      { title: "Goutami Nuchu — Software, AI & Cloud Engineer" },
       {
         name: "description",
         content:
-          "Portfolio of Gouthami Nurchu — software engineer, AI engineer, and cloud enthusiast. Building products at the intersection of AI, cloud, and elegant interfaces.",
+          "Portfolio of Goutami Nuchu — software engineer, AI engineer, and cloud enthusiast. Building products at the intersection of AI, cloud, and elegant interfaces.",
       },
-      { property: "og:title", content: "Gouthami Nurchu — Software, AI & Cloud Engineer" },
+      { property: "og:title", content: "Goutami Nuchu — Software, AI & Cloud Engineer" },
       {
         property: "og:description",
-        content: "Portfolio of Gouthami Nurchu — AI, cloud, and full-stack engineering.",
+        content: "Portfolio of Goutami Nuchu — AI, cloud, and full-stack engineering.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
@@ -54,6 +56,8 @@ function Index() {
         <Contact />
       </main>
       <Footer />
+      <CommandPalette />
+      <Toaster theme="dark" position="bottom-right" richColors closeButton />
     </div>
   );
 }
