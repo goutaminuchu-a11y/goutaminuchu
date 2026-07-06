@@ -14,23 +14,27 @@ export function About() {
           <Reveal>
             <div className="glass rounded-3xl p-8 lg:p-10">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                I'm pursuing my <span className="text-foreground font-medium">B.Tech in Computer Science & Business Systems</span> at
-                VNR VJIET, after completing a <span className="text-foreground font-medium">Diploma in Cloud Computing & Big Data</span>{" "}
-                — a path that taught me to think about software both at the metal and at the product level.
+                My path into software wasn't linear. I started with a{" "}
+                <span className="text-foreground font-medium">Diploma in Cloud Computing & Big Data</span> — the kind of course
+                where you learn what actually happens when a request leaves the browser — and I'm now pursuing my{" "}
+                <span className="text-foreground font-medium">B.Tech in Computer Science & Business Systems at VNR VJIET</span>.
+                That combination — infrastructure fluency underneath, product thinking on top — is how I approach every project.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                I love building things that feel obvious in hindsight: AI tools that quietly remove friction, cloud workflows
-                that just scale, and interfaces that get out of the way. My playground spans
-                <span className="text-primary"> Artificial Intelligence</span>,
-                <span className="text-primary"> Cloud Computing</span>, full-stack engineering, and product design.
+                I fell in love with software the moment I realized code isn't about syntax; it's about turning an idea into
+                something a stranger can use. Since then I've been chasing that feeling across{" "}
+                <span className="text-primary">AI</span>, <span className="text-primary">cloud</span>, and full-stack
+                engineering — from training and prompting models at{" "}
+                <span className="text-foreground font-medium">Swecha's VishwaM AI</span> to teaching robotics and IoT to students
+                at <span className="text-foreground font-medium">STEMX Education</span>.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                When I'm not shipping, I'm mentoring students, leading workshops, or learning the next tool that lets me
-                build faster. The bar I hold myself to: ship something useful, learn something hard, repeat.
+                What I care about: shipping something useful, learning something hard, and helping the next person up the
+                ladder. If I'm not building, I'm probably mentoring — or breaking something new just to understand how it works.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-2">
-                {["AI", "Cloud", "Product", "Open Source", "Education", "Innovation"].map((t) => (
+                {["AI", "Cloud", "Product", "Open Source", "Mentoring", "Innovation"].map((t) => (
                   <span key={t} className="rounded-full glass px-3 py-1 text-xs text-muted-foreground">
                     <Sparkles className="mr-1 inline h-3 w-3 text-primary" />
                     {t}
@@ -43,7 +47,7 @@ export function About() {
           <Reveal delay={0.1}>
             <div className="glass-strong rounded-3xl p-8 space-y-5">
               <InfoRow icon={Mail} label="Email" value={profile.email} href={`mailto:${profile.email}`} />
-              <InfoRow icon={Phone} label="Phone" value={profile.phone} />
+              <InfoRow icon={Phone} label="Phone" value={profile.phone} href={`tel:${profile.phone.replace(/\s/g, "")}`} />
               <InfoRow icon={MapPin} label="Location" value={profile.location} />
               <InfoRow icon={Languages} label="Languages" value="English · Telugu · Hindi" />
 
