@@ -7,8 +7,12 @@ import { CommandPalette } from "@/components/portfolio/CommandPalette";
 import { Hero } from "@/components/portfolio/sections/Hero";
 import { About } from "@/components/portfolio/sections/About";
 import { Experience } from "@/components/portfolio/sections/Experience";
+import { Journey } from "@/components/portfolio/sections/Journey";
 import { Skills } from "@/components/portfolio/sections/Skills";
 import { Projects } from "@/components/portfolio/sections/Projects";
+import { Awards } from "@/components/portfolio/sections/Awards";
+import { Leadership } from "@/components/portfolio/sections/Leadership";
+import { Gallery } from "@/components/portfolio/sections/Gallery";
 import { Education } from "@/components/portfolio/sections/Education";
 import { Certifications } from "@/components/portfolio/sections/Certifications";
 import { Achievements } from "@/components/portfolio/sections/Achievements";
@@ -22,7 +26,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Portfolio of Goutami Nuchu — software engineer, AI engineer, and cloud enthusiast. Building products at the intersection of AI, cloud, and elegant interfaces.",
+          "Portfolio of Goutami Nuchu — software engineer, AI engineer, and cloud enthusiast. Award-winning student engineer building at the intersection of AI, cloud, and product.",
       },
       { property: "og:title", content: "Goutami Nuchu — Software, AI & Cloud Engineer" },
       {
@@ -48,8 +52,12 @@ function Index() {
         <Hero />
         <About />
         <Experience />
+        <Journey />
         <Skills />
         <Projects />
+        <Awards />
+        <Leadership />
+        <Gallery />
         <Education />
         <Certifications />
         <Achievements />

@@ -1,5 +1,5 @@
 import profilePic from "@/assets/profile.jpg";
-import { Github, Linkedin, Mail, Download, ArrowRight, Code2 } from "lucide-react";
+import { Github, Linkedin, Mail, Download, ArrowRight, Code2, Sparkles } from "lucide-react";
 import { SiLeetcode, SiHackerrank } from "react-icons/si";
 import { Typewriter } from "../Typewriter";
 import { profile, orbitTech } from "@/data/portfolio";
@@ -27,9 +27,22 @@ export function Hero() {
             </h1>
           </Reveal>
 
+          <Reveal delay={0.08}>
+            <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-[11px] text-primary">
+              <Sparkles className="h-3 w-3" /> {profile.openTo}
+            </div>
+          </Reveal>
+
           <Reveal delay={0.1}>
             <div className="mt-4 font-display text-2xl sm:text-3xl text-muted-foreground">
               I'm a <Typewriter words={profile.roles} className="font-semibold" />
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.13}>
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs">
+              <span className="text-[10px] uppercase tracking-[0.2em] text-primary">Currently building</span>
+              <Typewriter words={profile.currentlyBuilding} className="text-foreground/90" />
             </div>
           </Reveal>
 
@@ -87,9 +100,7 @@ export function Hero() {
 
         {/* Right — profile + orbit */}
         <Reveal delay={0.1} className="relative mx-auto flex aspect-square w-full max-w-[520px] items-center justify-center">
-          {/* outer glow */}
           <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary/30 via-secondary/20 to-transparent blur-3xl animate-pulse-glow" />
-          {/* orbit ring 1 */}
           <div className="absolute inset-6 rounded-full border border-white/10 animate-orbit">
             {orbitTech.slice(0, 4).map((t, i) => {
               const angle = (i / 4) * Math.PI * 2;
@@ -107,7 +118,6 @@ export function Hero() {
               );
             })}
           </div>
-          {/* orbit ring 2 (reverse) */}
           <div
             className="absolute inset-0 rounded-full border border-white/5 animate-orbit"
             style={{ animationDirection: "reverse", animationDuration: "32s" }}
@@ -128,7 +138,6 @@ export function Hero() {
               );
             })}
           </div>
-          {/* photo */}
           <div className="relative h-[68%] w-[68%] rounded-full p-[2px] bg-gradient-to-tr from-primary via-secondary to-primary glow-ring">
             <div className="relative h-full w-full overflow-hidden rounded-full">
               <img

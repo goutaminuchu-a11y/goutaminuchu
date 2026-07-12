@@ -14,27 +14,32 @@ export function About() {
           <Reveal>
             <div className="glass rounded-3xl p-8 lg:p-10">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                My path into software wasn't linear. I started with a{" "}
-                <span className="text-foreground font-medium">Diploma in Cloud Computing & Big Data</span> — the kind of course
-                where you learn what actually happens when a request leaves the browser — and I'm now pursuing my{" "}
-                <span className="text-foreground font-medium">B.Tech in Computer Science & Business Systems at VNR VJIET</span>.
-                That combination — infrastructure fluency underneath, product thinking on top — is how I approach every project.
+                My journey into engineering began with a{" "}
+                <span className="text-foreground font-medium">Diploma in Cloud Computing & Big Data</span> — where I first
+                learned how software actually runs at scale. I'm now continuing that path into a{" "}
+                <span className="text-foreground font-medium">B.Tech in Computer Science & Business Systems at VNR VJIET</span>,
+                blending engineering rigor with product thinking.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                I fell in love with software the moment I realized code isn't about syntax; it's about turning an idea into
-                something a stranger can use. Since then I've been chasing that feeling across{" "}
-                <span className="text-primary">AI</span>, <span className="text-primary">cloud</span>, and full-stack
-                engineering — from training and prompting models at{" "}
-                <span className="text-foreground font-medium">Swecha's VishwaM AI</span> to teaching robotics and IoT to students
-                at <span className="text-foreground font-medium">STEMX Education</span>.
+                I'm passionate about <span className="text-primary">AI</span>,{" "}
+                <span className="text-primary">Cloud Computing</span>,{" "}
+                <span className="text-primary">Software Engineering</span>, and{" "}
+                <span className="text-primary">Full Stack Development</span> — and I learn best by building real-world
+                projects. From LLM-powered prototypes at{" "}
+                <span className="text-foreground font-medium">Swecha's VishwaM AI</span> to teaching robotics and coding to
+                students at <span className="text-foreground font-medium">STEMX Education</span>, every experience has
+                sharpened how I think and ship.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                What I care about: shipping something useful, learning something hard, and helping the next person up the
-                ladder. If I'm not building, I'm probably mentoring — or breaking something new just to understand how it works.
+                I'm an active participant in <span className="text-foreground font-medium">hackathons, competitions, and
+                technical communities</span> — from winning at inter-college contests to helping run the{" "}
+                <span className="text-foreground font-medium">Cloud Community Club</span> as Vice President. I care about
+                solving practical problems with technology, and I believe continuous learning and collaboration are what
+                turn a coder into an engineer.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-2">
-                {["AI", "Cloud", "Product", "Open Source", "Mentoring", "Innovation"].map((t) => (
+                {["AI", "Cloud", "Full Stack", "Product", "Open Source", "Mentoring", "Community"].map((t) => (
                   <span key={t} className="rounded-full glass px-3 py-1 text-xs text-muted-foreground">
                     <Sparkles className="mr-1 inline h-3 w-3 text-primary" />
                     {t}
