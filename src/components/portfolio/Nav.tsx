@@ -4,11 +4,13 @@ const links = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
   { id: "experience", label: "Experience" },
+  { id: "journey", label: "Journey" },
   { id: "skills", label: "Skills" },
   { id: "projects", label: "Projects" },
-  { id: "education", label: "Education" },
-  { id: "certifications", label: "Certifications" },
-  { id: "achievements", label: "Achievements" },
+  { id: "awards", label: "Awards" },
+  { id: "leadership", label: "Leadership" },
+  { id: "gallery", label: "Gallery" },
+  { id: "certifications", label: "Certs" },
   { id: "contact", label: "Contact" },
 ];
 

@@ -31,6 +31,15 @@ export const profile = {
   ],
   summary:
     "I build at the intersection of AI, cloud, and product — turning hard problems into elegant software. From training models to shipping full-stack interfaces, I care about craft, performance, and the human on the other side of the screen.",
+  openTo:
+    "Open to Software Engineering, AI, Cloud Computing & Full Stack Development Opportunities",
+  currentlyBuilding: [
+    "AI-powered consumer intelligence products",
+    "Cloud-native web applications",
+    "Full Stack software solutions",
+    "AI + Computer Vision projects",
+    "Open-source learning",
+  ],
 };
 
 export const orbitTech = ["Python", "AWS", "AI", "Git", "React", "Docker", "Linux", "Cloud"];
@@ -42,11 +51,12 @@ export const experiences = [
     location: "Hyderabad, India",
     period: "2025 · Internship",
     description:
-      "Worked on applied ML, prompt engineering, and collaborative AI tooling. Built data pipelines, ran model experiments, and shipped features alongside a small team.",
+      "Worked on AI learning initiatives, explored machine learning fundamentals, and contributed to collaborative AI development using Python, data analysis, and prompt engineering.",
     impact: [
-      "Prototyped LLM-powered workflows that cut manual data prep time",
+      "Prototyped LLM-powered workflows that reduced manual data prep time",
       "Contributed to open, community-driven AI research at Swecha",
-      "Collaborated over GitHub with async reviews and clean PR hygiene",
+      "Practiced prompt engineering, Python, and clean PR hygiene over GitHub",
+      "Built small AI prototypes end-to-end",
     ],
     skills: ["Machine Learning", "Python", "Pandas", "NumPy", "Prompt Engineering", "Google Colab", "GitHub"],
   },
@@ -56,11 +66,13 @@ export const experiences = [
     location: "Hyderabad, India",
     period: "6 Months",
     description:
-      "Designed hands-on STEM curriculum across robotics, electronics, IoT, and coding. Mentored students and led workshops centered on project-based learning.",
+      "Delivered hands-on STEM workshops across robotics, electronics, IoT, and coding. Designed practical learning experiences and mentored students through engineering projects.",
     impact: [
-      "Mentored 100+ students through robotics & coding project builds",
-      "Ran innovation workshops that turned classroom theory into working prototypes",
-      "Authored lesson kits reused across cohorts",
+      "Delivered STEM workshops and led project-based learning sessions",
+      "Guided 100+ students through robotics and programming activities",
+      "Designed practical STEM learning experiences and lesson kits",
+      "Mentored students during engineering projects and encouraged innovation",
+      "Collaborated with educators to iterate on curriculum",
     ],
     skills: ["Python", "Arduino", "IoT", "Robotics", "Electronics", "Mentorship"],
   },
@@ -111,12 +123,7 @@ export const projects = [
     challenge: "Manual product labeling is slow and error-prone at scale.",
     solution:
       "A Flask-based labeling tool that ingests images, auto-suggests tags, and lets operators confirm in one click.",
-    features: [
-      "Bulk image upload",
-      "Auto-tag suggestions from OCR + rules",
-      "Keyboard-first labeling UX",
-      "CSV export",
-    ],
+    features: ["Bulk image upload", "Auto-tag suggestions from OCR + rules", "Keyboard-first labeling UX", "CSV export"],
     stack: ["Python", "Flask", "Tesseract", "SQLite"],
     github: "https://github.com/gautami1407",
     demo: "#",
@@ -127,14 +134,8 @@ export const projects = [
     image: projectInventory,
     tags: ["React", "Node.js", "MongoDB", "Express"],
     challenge: "Residential managers lose track of assets across floors and vendors.",
-    solution:
-      "A MERN app to track assets, vendors, and maintenance cycles with alerts and audit logs.",
-    features: [
-      "Asset lifecycle tracking",
-      "Vendor + purchase order module",
-      "Low-stock and maintenance alerts",
-      "Role-based dashboards",
-    ],
+    solution: "A MERN app to track assets, vendors, and maintenance cycles with alerts and audit logs.",
+    features: ["Asset lifecycle tracking", "Vendor + purchase order module", "Low-stock and maintenance alerts", "Role-based dashboards"],
     stack: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/gautami1407",
     demo: "#",
@@ -147,12 +148,7 @@ export const projects = [
     challenge: "Repetitive desktop tasks need a hands-free interface.",
     solution:
       "A local voice assistant that transcribes, resolves intent, and executes system actions like search, launch, and calendar.",
-    features: [
-      "Wake-word activation",
-      "Intent routing with fuzzy matching",
-      "System automation (apps, search, media)",
-      "TTS responses",
-    ],
+    features: ["Wake-word activation", "Intent routing with fuzzy matching", "System automation (apps, search, media)", "TTS responses"],
     stack: ["Python", "SpeechRecognition", "pyttsx3", "spaCy"],
     github: "https://github.com/gautami1407",
     demo: "#",
@@ -163,14 +159,8 @@ export const projects = [
     image: projectCare,
     tags: ["React", "Node.js", "Healthcare"],
     challenge: "Patients and independent caregivers struggle to coordinate visits and records.",
-    solution:
-      "A booking + records platform with caregiver profiles, appointment slots, and secure notes.",
-    features: [
-      "Caregiver discovery",
-      "Slot-based appointments",
-      "Encrypted patient notes",
-      "Chat-lite for scheduling",
-    ],
+    solution: "A booking + records platform with caregiver profiles, appointment slots, and secure notes.",
+    features: ["Caregiver discovery", "Slot-based appointments", "Encrypted patient notes", "Chat-lite for scheduling"],
     stack: ["React", "Node.js", "MongoDB", "JWT"],
     github: "https://github.com/gautami1407",
     demo: "#",
@@ -183,12 +173,7 @@ export const projects = [
     challenge: "AR on the web usually means heavy native apps.",
     solution:
       "A lightweight Three.js + MindAR pipeline that anchors 3D content to printed markers directly in the browser.",
-    features: [
-      "Marker detection at 30fps",
-      "3D asset overlays",
-      "Mobile-first camera pipeline",
-      "Zero install, pure web",
-    ],
+    features: ["Marker detection at 30fps", "3D asset overlays", "Mobile-first camera pipeline", "Zero install, pure web"],
     stack: ["Three.js", "MindAR", "WebXR", "JavaScript"],
     github: "https://github.com/gautami1407",
     demo: "#",
@@ -286,19 +271,257 @@ export const skillGroups: { title: string; items: { name: string; level: number;
   },
 ];
 
-export const certifications = [
-  "Linux, Python & Java — NSIC Industrial Training",
-  "AI & Machine Learning Fundamentals",
-  "AWS Cloud Practitioner Essentials",
-  "Oracle Cloud Foundations",
-  "Microsoft Learn — Azure Fundamentals",
+// Categorized certifications
+export const certificationGroups: { category: string; items: string[] }[] = [
+  {
+    category: "Cloud",
+    items: [
+      "AWS Cloud Practitioner Essentials",
+      "Oracle Cloud Infrastructure Foundations",
+      "Microsoft Learn — Azure Fundamentals",
+    ],
+  },
+  {
+    category: "Programming",
+    items: ["Python — NSIC Industrial Training", "Java Programming", "C Programming"],
+  },
+  {
+    category: "Artificial Intelligence",
+    items: ["Machine Learning Fundamentals", "AI Workshops", "Prompt Engineering"],
+  },
+  {
+    category: "Cybersecurity",
+    items: ["Cybersecurity Fundamentals", "Network Security Workshops"],
+  },
+  {
+    category: "Professional Development",
+    items: ["Hackathon Participation", "Workshop Participation", "Technical Bootcamps", "Industry Seminars"],
+  },
+];
+
+// Legacy flat list still used by CommandPalette; safe to keep
+export const certifications = certificationGroups.flatMap((g) => g.items);
+
+// Awards & competitions — separate from certifications
+export const awards = [
+  {
+    place: "1st",
+    medal: "🥇",
+    event: "Convergence Connectathon",
+    description:
+      "Won First Place by developing an innovative solution through teamwork, technical implementation, and effective presentation.",
+  },
+  {
+    place: "2nd",
+    medal: "🥈",
+    event: "Ideathon",
+    description:
+      "Secured Second Place by proposing a creative technology-driven solution addressing a real-world problem.",
+  },
+  {
+    place: "3rd",
+    medal: "🥉",
+    event: "Gameathon",
+    description:
+      "Won Third Place by collaborating with a team to design and develop a game under limited time.",
+  },
+];
+
+export const hackathons = {
+  count: 4,
+  learnings: [
+    "Worked in multidisciplinary teams",
+    "Learned new technologies rapidly",
+    "Improved collaboration and communication",
+    "Built working prototypes under time pressure",
+    "Expanded professional network",
+    "Learned from mentors and industry experts",
+  ],
+};
+
+export const leadership = [
+  {
+    role: "Vice President",
+    org: "Cloud Community Club",
+    period: "2023 — Present",
+    responsibilities: [
+      "Organized technical events and workshops",
+      "Coordinated student teams and managed volunteers",
+      "Promoted cloud computing and emerging technologies",
+      "Encouraged peer learning and community building",
+      "Helped build a strong technical community on campus",
+    ],
+  },
+];
+
+export const journey = [
+  {
+    year: "2022",
+    milestones: ["Started Diploma in Cloud Computing & Big Data"],
+  },
+  {
+    year: "2023",
+    milestones: ["Joined Cloud Community Club", "Started exploring Cloud Computing"],
+  },
+  {
+    year: "2024",
+    milestones: ["Built Full Stack Projects", "Participated in technical events"],
+  },
+  {
+    year: "2025",
+    milestones: [
+      "Completed Diploma",
+      "STEMX Education Internship",
+      "Summer of AI",
+      "Hackathons & Competitions",
+    ],
+  },
+  {
+    year: "2026",
+    milestones: [
+      "Swecha AI Internship",
+      "Started B.Tech at VNR VJIET",
+      "Building AI-powered applications",
+      "Competition achievements",
+    ],
+  },
+];
+
+// Data-driven gallery — add new items by editing this array
+export type GalleryItem = {
+  id: string;
+  title: string;
+  category:
+    | "Hackathons"
+    | "Competitions"
+    | "Internships"
+    | "Workshops"
+    | "Leadership"
+    | "Cloud Community Club"
+    | "Projects"
+    | "College Events"
+    | "Certificates";
+  date: string;
+  location?: string;
+  description: string;
+  achievement?: string;
+  image?: string; // optional URL; falls back to gradient cover
+  gradient?: string; // tailwind gradient classes for the fallback cover
+};
+
+export const gallery: GalleryItem[] = [
+  {
+    id: "connectathon-1st",
+    title: "Convergence Connectathon — 1st Place",
+    category: "Competitions",
+    date: "2025",
+    location: "Hyderabad",
+    description: "Winning moment with the team after presenting an innovative technical solution to the judges.",
+    achievement: "🥇 First Place",
+    gradient: "from-yellow-500/40 via-orange-500/30 to-red-500/30",
+  },
+  {
+    id: "ideathon-2nd",
+    title: "Ideathon — 2nd Place",
+    category: "Competitions",
+    date: "2025",
+    location: "Hyderabad",
+    description: "Pitching a technology-driven solution to a real-world problem alongside teammates.",
+    achievement: "🥈 Second Place",
+    gradient: "from-slate-400/40 via-slate-300/30 to-zinc-500/30",
+  },
+  {
+    id: "gameathon-3rd",
+    title: "Gameathon — 3rd Place",
+    category: "Competitions",
+    date: "2025",
+    location: "Hyderabad",
+    description: "Designed and shipped a game with the team under a tight time constraint.",
+    achievement: "🥉 Third Place",
+    gradient: "from-amber-700/40 via-orange-600/30 to-rose-500/30",
+  },
+  {
+    id: "hack-1",
+    title: "Hackathon — Team Sprint",
+    category: "Hackathons",
+    date: "2025",
+    description: "Rapid prototyping session with a multidisciplinary team. Focused on learning and shipping.",
+    gradient: "from-cyan-500/40 via-sky-500/30 to-blue-600/30",
+  },
+  {
+    id: "hack-2",
+    title: "Hackathon — Presentation Day",
+    category: "Hackathons",
+    date: "2025",
+    description: "Presenting the prototype and demo to judges. Sharpened storytelling and technical narrative.",
+    gradient: "from-violet-500/40 via-purple-500/30 to-fuchsia-500/30",
+  },
+  {
+    id: "hack-3",
+    title: "Hackathon — Working Session",
+    category: "Hackathons",
+    date: "2024",
+    description: "Late-night pair programming and rapid iteration on a working prototype.",
+    gradient: "from-emerald-500/40 via-teal-500/30 to-cyan-500/30",
+  },
+  {
+    id: "hack-4",
+    title: "Hackathon — Networking",
+    category: "Hackathons",
+    date: "2024",
+    description: "Meeting mentors, industry experts, and fellow builders.",
+    gradient: "from-pink-500/40 via-rose-500/30 to-orange-400/30",
+  },
+  {
+    id: "stemx-workshop",
+    title: "STEMX — Robotics Workshop",
+    category: "Internships",
+    date: "2025",
+    location: "Hyderabad",
+    description: "Delivered a robotics workshop and mentored students through hands-on builds.",
+    gradient: "from-indigo-500/40 via-blue-500/30 to-cyan-500/30",
+  },
+  {
+    id: "stemx-teaching",
+    title: "STEMX — Mentoring Students",
+    category: "Internships",
+    date: "2025",
+    description: "Guided students through programming and electronics projects.",
+    gradient: "from-teal-500/40 via-emerald-500/30 to-green-500/30",
+  },
+  {
+    id: "swecha-ai",
+    title: "Swecha — VishwaM AI Session",
+    category: "Internships",
+    date: "2026",
+    description: "Collaborative AI development, prompt engineering, and ML experimentation.",
+    gradient: "from-fuchsia-500/40 via-violet-500/30 to-indigo-500/30",
+  },
+  {
+    id: "ccc-event",
+    title: "Cloud Community Club — Tech Event",
+    category: "Cloud Community Club",
+    date: "2024",
+    description: "Organized a cloud technology event with student volunteers and speakers.",
+    gradient: "from-sky-500/40 via-cyan-500/30 to-teal-500/30",
+  },
+  {
+    id: "ccc-workshop",
+    title: "Cloud Community Club — Workshop",
+    category: "Workshops",
+    date: "2024",
+    description: "Conducted a hands-on cloud fundamentals workshop for peers.",
+    gradient: "from-blue-500/40 via-indigo-500/30 to-violet-500/30",
+  },
 ];
 
 export const achievements = [
   { label: "Projects Shipped", value: 12 },
+  { label: "Competitions Won", value: 3 },
+  { label: "Hackathons", value: 4 },
   { label: "Internships", value: 2 },
   { label: "Technologies", value: 25 },
-  { label: "Certifications", value: 6 },
+  { label: "Certifications", value: 12 },
+  { label: "Community Events", value: 8 },
   { label: "Workshops", value: 8 },
-  { label: "Community Events", value: 5 },
 ];
