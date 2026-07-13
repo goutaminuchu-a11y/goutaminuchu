@@ -10,6 +10,7 @@ import { Experience } from "@/components/portfolio/sections/Experience";
 import { Journey } from "@/components/portfolio/sections/Journey";
 import { Skills } from "@/components/portfolio/sections/Skills";
 import { Projects } from "@/components/portfolio/sections/Projects";
+import { GitHubActivity } from "@/components/portfolio/sections/GitHubActivity";
 import { Awards } from "@/components/portfolio/sections/Awards";
 import { Leadership } from "@/components/portfolio/sections/Leadership";
 import { Gallery } from "@/components/portfolio/sections/Gallery";
@@ -56,6 +57,7 @@ function Index() {
         <Journey />
         <Skills />
         <Projects />
+        <GitHubActivity />
         <Awards />
         <Leadership />
         <Gallery />

@@ -1,13 +1,17 @@
+import { useState } from "react";
 import profilePic from "@/assets/profile.jpg";
 import { Github, Linkedin, Mail, Download, ArrowRight, Code2, Sparkles } from "lucide-react";
 import { SiLeetcode, SiHackerrank } from "react-icons/si";
 import { Typewriter } from "../Typewriter";
 import { profile, orbitTech } from "@/data/portfolio";
 import { Reveal } from "../Reveal";
+import { ResumeModal } from "../ResumeModal";
 
 export function Hero() {
+  const [resumeOpen, setResumeOpen] = useState(false);
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-28 pb-16">
+      <ResumeModal open={resumeOpen} onClose={() => setResumeOpen(false)} />
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 lg:grid-cols-[1.15fr_1fr] lg:gap-16 items-center">
         {/* Left */}
         <div>
@@ -54,12 +58,12 @@ export function Hero() {
 
           <Reveal delay={0.2}>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={profile.resumeUrl}
+              <button
+                onClick={() => setResumeOpen(true)}
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03] glow-ring"
               >
-                <Download className="h-4 w-4" /> Download Resume
-              </a>
+                <Download className="h-4 w-4" /> View Resume
+              </button>
               <a
                 href="#projects"
                 className="group inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold hover:bg-white/[0.07] transition"
