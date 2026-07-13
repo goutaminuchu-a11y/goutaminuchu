@@ -61,6 +61,7 @@ function Index() {
         <Gallery />
         <Education />
         <Certifications />
+        <CertificateGallery />
         <Achievements />
         <Contact />
       </main>
