@@ -1,9 +1,11 @@
+import { useState } from "react";
 import profilePic from "@/assets/profile.jpg";
 import { Github, Linkedin, Mail, Download, ArrowRight, Code2, Sparkles } from "lucide-react";
 import { SiLeetcode, SiHackerrank } from "react-icons/si";
 import { Typewriter } from "../Typewriter";
 import { profile, orbitTech } from "@/data/portfolio";
 import { Reveal } from "../Reveal";
+import { ResumeModal } from "../ResumeModal";
 
 export function Hero() {
   return (
