@@ -15,6 +15,7 @@ import { Leadership } from "@/components/portfolio/sections/Leadership";
 import { Gallery } from "@/components/portfolio/sections/Gallery";
 import { Education } from "@/components/portfolio/sections/Education";
 import { Certifications } from "@/components/portfolio/sections/Certifications";
+import { CertificateGallery } from "@/components/portfolio/sections/CertificateGallery";
 import { Achievements } from "@/components/portfolio/sections/Achievements";
 import { Contact } from "@/components/portfolio/sections/Contact";
 import { Footer } from "@/components/portfolio/sections/Footer";
