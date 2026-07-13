@@ -302,6 +302,184 @@ export const certificationGroups: { category: string; items: string[] }[] = [
 // Legacy flat list still used by CommandPalette; safe to keep
 export const certifications = certificationGroups.flatMap((g) => g.items);
 
+// Certificate gallery — visual proofs with short descriptions. Add up to ~20.
+export type CertificateItem = {
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  category: "Cloud" | "Programming" | "AI" | "Cybersecurity" | "Workshop" | "Internship" | "Other";
+  description: string; // short, <= ~140 chars
+  image?: string; // optional certificate image URL
+  credentialUrl?: string;
+  gradient?: string;
+};
+
+export const certificateGallery: CertificateItem[] = [
+  {
+    id: "aws-ccp",
+    title: "AWS Cloud Practitioner Essentials",
+    issuer: "Amazon Web Services",
+    date: "2024",
+    category: "Cloud",
+    description: "Foundational AWS services, pricing, and security — the language of modern cloud infrastructure.",
+    gradient: "from-orange-500/40 via-amber-500/30 to-yellow-500/30",
+  },
+  {
+    id: "oci-foundations",
+    title: "Oracle Cloud Infrastructure Foundations",
+    issuer: "Oracle",
+    date: "2024",
+    category: "Cloud",
+    description: "Core OCI concepts: compute, storage, networking, identity, and cloud-native architecture basics.",
+    gradient: "from-red-500/40 via-rose-500/30 to-pink-500/30",
+  },
+  {
+    id: "azure-fundamentals",
+    title: "Microsoft Azure Fundamentals",
+    issuer: "Microsoft Learn",
+    date: "2024",
+    category: "Cloud",
+    description: "Azure services, workloads, and governance fundamentals across the Microsoft cloud ecosystem.",
+    gradient: "from-sky-500/40 via-blue-500/30 to-indigo-500/30",
+  },
+  {
+    id: "python-nsic",
+    title: "Python — NSIC Industrial Training",
+    issuer: "NSIC",
+    date: "2024",
+    category: "Programming",
+    description: "Industrial Python training covering syntax, OOP, file I/O, and small end-to-end automation projects.",
+    gradient: "from-emerald-500/40 via-teal-500/30 to-cyan-500/30",
+  },
+  {
+    id: "java",
+    title: "Java Programming",
+    issuer: "Certification Program",
+    date: "2024",
+    category: "Programming",
+    description: "OOP, collections, exception handling, and building console applications in Java.",
+    gradient: "from-orange-600/40 via-red-500/30 to-rose-500/30",
+  },
+  {
+    id: "c-programming",
+    title: "C Programming",
+    issuer: "Certification Program",
+    date: "2023",
+    category: "Programming",
+    description: "Pointers, memory management, and structured programming — the foundations of systems thinking.",
+    gradient: "from-slate-500/40 via-zinc-500/30 to-gray-500/30",
+  },
+  {
+    id: "ml-fundamentals",
+    title: "Machine Learning Fundamentals",
+    issuer: "Online Program",
+    date: "2025",
+    category: "AI",
+    description: "Supervised, unsupervised, and evaluation techniques — building intuition for real ML pipelines.",
+    gradient: "from-violet-500/40 via-purple-500/30 to-fuchsia-500/30",
+  },
+  {
+    id: "prompt-engineering",
+    title: "Prompt Engineering",
+    issuer: "Online Program",
+    date: "2025",
+    category: "AI",
+    description: "Structured prompting, chain-of-thought, and evaluation patterns for reliable LLM applications.",
+    gradient: "from-fuchsia-500/40 via-pink-500/30 to-rose-500/30",
+  },
+  {
+    id: "ai-workshop",
+    title: "AI Workshop",
+    issuer: "Swecha / Community",
+    date: "2025",
+    category: "AI",
+    description: "Hands-on AI development, Python tooling, and collaborative model experimentation.",
+    gradient: "from-indigo-500/40 via-violet-500/30 to-purple-500/30",
+  },
+  {
+    id: "cyber-fundamentals",
+    title: "Cybersecurity Fundamentals",
+    issuer: "Online Program",
+    date: "2024",
+    category: "Cybersecurity",
+    description: "Threat models, authentication, and defensive engineering essentials for modern applications.",
+    gradient: "from-emerald-600/40 via-green-500/30 to-lime-500/30",
+  },
+  {
+    id: "network-security",
+    title: "Network Security Workshop",
+    issuer: "Workshop",
+    date: "2024",
+    category: "Cybersecurity",
+    description: "TCP/IP internals, common attack surfaces, and hardening patterns for network services.",
+    gradient: "from-teal-500/40 via-emerald-500/30 to-green-600/30",
+  },
+  {
+    id: "stemx-internship",
+    title: "STEMX Education — Internship",
+    issuer: "STEMX Education",
+    date: "2025",
+    category: "Internship",
+    description: "6-month STEM internship: robotics, IoT, and mentoring 100+ students through hands-on engineering.",
+    gradient: "from-cyan-500/40 via-sky-500/30 to-blue-500/30",
+  },
+  {
+    id: "swecha-internship",
+    title: "Swecha VishwaM AI — Internship",
+    issuer: "Swecha",
+    date: "2025",
+    category: "Internship",
+    description: "Community-driven AI internship: Python, ML, prompt engineering, and open-source collaboration.",
+    gradient: "from-purple-500/40 via-fuchsia-500/30 to-pink-500/30",
+  },
+  {
+    id: "summer-of-ai",
+    title: "Summer of AI",
+    issuer: "AI Program",
+    date: "2025",
+    category: "AI",
+    description: "Immersive summer program on modern AI, LLMs, and applied machine learning projects.",
+    gradient: "from-amber-500/40 via-orange-500/30 to-red-500/30",
+  },
+  {
+    id: "hackathon-cert",
+    title: "Hackathon Participation",
+    issuer: "Multiple Organizers",
+    date: "2024 — 2025",
+    category: "Workshop",
+    description: "Multiple hackathons — rapid prototyping, teamwork, and shipping working demos under pressure.",
+    gradient: "from-pink-500/40 via-rose-500/30 to-red-500/30",
+  },
+  {
+    id: "tech-bootcamp",
+    title: "Technical Bootcamp",
+    issuer: "Industry Program",
+    date: "2024",
+    category: "Workshop",
+    description: "Intensive bootcamp on modern development workflows, tooling, and collaborative engineering.",
+    gradient: "from-blue-500/40 via-indigo-500/30 to-violet-500/30",
+  },
+  {
+    id: "industry-seminar",
+    title: "Industry Seminar",
+    issuer: "Industry Speakers",
+    date: "2024",
+    category: "Workshop",
+    description: "Industry seminar on emerging tech trends, career paths, and real-world engineering practices.",
+    gradient: "from-slate-500/40 via-blue-500/30 to-cyan-500/30",
+  },
+  {
+    id: "cloud-community",
+    title: "Cloud Community Club — Leadership",
+    issuer: "VNR VJIET",
+    date: "2023 — Present",
+    category: "Other",
+    description: "Vice President role — organizing events, mentoring peers, and building a campus cloud community.",
+    gradient: "from-sky-500/40 via-cyan-500/30 to-teal-500/30",
+  },
+];
+
 // Awards & competitions — separate from certifications
 export const awards = [
   {
