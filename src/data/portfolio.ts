@@ -478,6 +478,42 @@ export const certificateGallery: CertificateItem[] = [
     description: "Vice President role — organizing events, mentoring peers, and building a campus cloud community.",
     gradient: "from-sky-500/40 via-cyan-500/30 to-teal-500/30",
   },
+  {
+    id: "git-github",
+    title: "Git & GitHub Essentials",
+    issuer: "Online Program",
+    date: "2024",
+    category: "Programming",
+    description: "Version control workflows, branching, PR reviews, and collaborative engineering habits.",
+    gradient: "from-zinc-500/40 via-slate-500/30 to-neutral-500/30",
+  },
+  {
+    id: "web-dev",
+    title: "Full Stack Web Development",
+    issuer: "Online Program",
+    date: "2024",
+    category: "Programming",
+    description: "HTML, CSS, JavaScript, React, and Node fundamentals — building end-to-end web applications.",
+    gradient: "from-blue-500/40 via-cyan-500/30 to-emerald-500/30",
+  },
+  {
+    id: "dsa",
+    title: "Data Structures & Algorithms",
+    issuer: "Online Program",
+    date: "2024",
+    category: "Programming",
+    description: "Arrays, linked lists, trees, graphs, and algorithm patterns for problem-solving interviews.",
+    gradient: "from-yellow-500/40 via-amber-500/30 to-orange-500/30",
+  },
+  {
+    id: "linux",
+    title: "Linux & Shell Scripting",
+    issuer: "Workshop",
+    date: "2024",
+    category: "Cloud",
+    description: "Linux fundamentals, shell scripting, and command-line productivity for cloud environments.",
+    gradient: "from-neutral-500/40 via-stone-500/30 to-zinc-500/30",
+  },
 ];
 
 // Awards & competitions — separate from certifications
