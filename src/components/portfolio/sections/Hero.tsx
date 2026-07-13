@@ -8,8 +8,10 @@ import { Reveal } from "../Reveal";
 import { ResumeModal } from "../ResumeModal";
 
 export function Hero() {
+  const [resumeOpen, setResumeOpen] = useState(false);
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-28 pb-16">
+      <ResumeModal open={resumeOpen} onClose={() => setResumeOpen(false)} />
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 lg:grid-cols-[1.15fr_1fr] lg:gap-16 items-center">
         {/* Left */}
         <div>
