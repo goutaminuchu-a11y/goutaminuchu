@@ -58,12 +58,12 @@ export function Hero() {
 
           <Reveal delay={0.2}>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={profile.resumeUrl}
+              <button
+                onClick={() => setResumeOpen(true)}
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary px-5 py-3 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03] glow-ring"
               >
-                <Download className="h-4 w-4" /> Download Resume
-              </a>
+                <Download className="h-4 w-4" /> View Resume
+              </button>
               <a
                 href="#projects"
                 className="group inline-flex items-center gap-2 rounded-full glass px-5 py-3 text-sm font-semibold hover:bg-white/[0.07] transition"
