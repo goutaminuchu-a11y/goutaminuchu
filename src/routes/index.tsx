@@ -57,6 +57,7 @@ function Index() {
         <Journey />
         <Skills />
         <Projects />
+        <GitHubActivity />
         <Awards />
         <Leadership />
         <Gallery />
