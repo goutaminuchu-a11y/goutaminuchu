@@ -1,9 +1,8 @@
 import { useEffect } from "react";
-import { X, Github, ArrowUpRight, Target, Lightbulb, ListChecks, Cpu } from "lucide-react";
+import { X, Github, ArrowUpRight, Target, Lightbulb, ListChecks, Cpu, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { projects } from "@/data/portfolio";
-
-type Project = (typeof projects)[number];
+import { Link } from "@tanstack/react-router";
+import type { Project } from "@/data/portfolio";
 
 export function ProjectModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
   useEffect(() => {
