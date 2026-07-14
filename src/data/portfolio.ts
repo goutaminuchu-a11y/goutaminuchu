@@ -514,6 +514,114 @@ export const certificateGallery: CertificateItem[] = [
     description: "Linux fundamentals, shell scripting, and command-line productivity for cloud environments.",
     gradient: "from-neutral-500/40 via-stone-500/30 to-zinc-500/30",
   },
+  {
+    id: "docker-basics",
+    title: "Docker & Containers",
+    issuer: "Online Program",
+    date: "2025",
+    category: "Cloud",
+    description: "Container fundamentals, Dockerfiles, images, and multi-stage builds for reproducible deploys.",
+    gradient: "from-sky-600/40 via-blue-500/30 to-cyan-400/30",
+  },
+  {
+    id: "k8s-intro",
+    title: "Kubernetes — Intro",
+    issuer: "Online Program",
+    date: "2025",
+    category: "Cloud",
+    description: "Pods, deployments, services, and the mental model behind cluster orchestration.",
+    gradient: "from-indigo-600/40 via-blue-600/30 to-sky-500/30",
+  },
+  {
+    id: "sql-fundamentals",
+    title: "SQL Fundamentals",
+    issuer: "Online Program",
+    date: "2024",
+    category: "Programming",
+    description: "Joins, aggregates, indexing, and thinking in relational sets — the backbone of all data work.",
+    gradient: "from-emerald-600/40 via-green-500/30 to-teal-500/30",
+  },
+  {
+    id: "genai-llm",
+    title: "Generative AI with LLMs",
+    issuer: "Online Program",
+    date: "2025",
+    category: "AI",
+    description: "Transformer intuition, fine-tuning basics, RAG patterns, and evaluating LLM outputs.",
+    gradient: "from-fuchsia-600/40 via-purple-500/30 to-violet-500/30",
+  },
+  {
+    id: "responsive-design",
+    title: "Responsive Web Design",
+    issuer: "freeCodeCamp",
+    date: "2024",
+    category: "Programming",
+    description: "Semantic HTML, flexible layouts, and accessibility-first CSS across every screen size.",
+    gradient: "from-cyan-500/40 via-teal-500/30 to-emerald-500/30",
+  },
+  {
+    id: "ethical-hacking",
+    title: "Intro to Ethical Hacking",
+    issuer: "Workshop",
+    date: "2024",
+    category: "Cybersecurity",
+    description: "Recon, common exploits, and defensive mindsets — building things that don't fall over easily.",
+    gradient: "from-red-600/40 via-rose-500/30 to-pink-500/30",
+  },
+  {
+    id: "postman-api",
+    title: "API Testing with Postman",
+    issuer: "Workshop",
+    date: "2024",
+    category: "Programming",
+    description: "REST fundamentals, request chaining, environments, and automated collection runs.",
+    gradient: "from-orange-500/40 via-amber-500/30 to-yellow-500/30",
+  },
+  {
+    id: "figma-ui",
+    title: "UI/UX with Figma",
+    issuer: "Workshop",
+    date: "2024",
+    category: "Workshop",
+    description: "Components, auto-layout, and design systems — communicating intent before writing code.",
+    gradient: "from-pink-500/40 via-fuchsia-500/30 to-purple-500/30",
+  },
+];
+
+// Testimonials — short quotes from mentors, teammates and peers
+export type Testimonial = {
+  id: string;
+  quote: string;
+  name: string;
+  role: string;
+  gradient?: string;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "t1",
+    quote:
+      "Goutami consistently shows up with curiosity and a builder's instinct — she turns rough ideas into shipped prototypes faster than most.",
+    name: "Program Mentor",
+    role: "STEMX Education",
+    gradient: "from-primary/30 to-secondary/20",
+  },
+  {
+    id: "t2",
+    quote:
+      "One of the most reliable teammates I've worked with. Deeply technical, but always focused on the user and the demo.",
+    name: "Hackathon Teammate",
+    role: "Convergence Connectathon '25",
+    gradient: "from-secondary/30 to-primary/20",
+  },
+  {
+    id: "t3",
+    quote:
+      "She leads by doing. Whether it's a workshop, a club event, or a late-night sprint, the standard goes up when she's in the room.",
+    name: "Cloud Community Club",
+    role: "Peer, VNR VJIET",
+    gradient: "from-fuchsia-500/25 to-cyan-500/20",
+  },
 ];
 
 // Awards & competitions — separate from certifications
@@ -735,7 +843,7 @@ export const achievements = [
   { label: "Hackathons", value: 4 },
   { label: "Internships", value: 2 },
   { label: "Technologies", value: 25 },
-  { label: "Certifications", value: 12 },
+  { label: "Certifications", value: 20 },
   { label: "Community Events", value: 8 },
   { label: "Workshops", value: 8 },
 ];
