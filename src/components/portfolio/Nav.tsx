@@ -13,6 +13,7 @@ const links = [
   { id: "gallery", label: "Gallery" },
   { id: "certifications", label: "Certs" },
   { id: "certificate-gallery", label: "Certificates" },
+  { id: "testimonials", label: "Kind Words" },
   { id: "contact", label: "Contact" },
 ];
 
