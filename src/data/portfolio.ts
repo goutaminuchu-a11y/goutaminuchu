@@ -843,7 +843,7 @@ export const achievements = [
   { label: "Hackathons", value: 4 },
   { label: "Internships", value: 2 },
   { label: "Technologies", value: 25 },
-  { label: "Certifications", value: 12 },
+  { label: "Certifications", value: 20 },
   { label: "Community Events", value: 8 },
   { label: "Workshops", value: 8 },
 ];
