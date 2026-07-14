@@ -66,6 +66,7 @@ function Index() {
         <Certifications />
         <CertificateGallery />
         <Achievements />
+        <Testimonials />
         <Contact />
       </main>
       <Footer />
