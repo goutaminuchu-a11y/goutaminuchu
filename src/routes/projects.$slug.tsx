@@ -58,7 +58,7 @@ function NotFoundBody() {
 }
 
 function CaseStudyPage() {
-  const { project } = Route.useLoaderData();
+  const { project } = Route.useLoaderData() as { project: Project };
   const cs = project.caseStudy;
 
   return (
