@@ -2,7 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowUpRight, Github, Target, Route as RouteIcon, Layers, TrendingUp, Sparkles, Clock, User } from "lucide-react";
 import { Background } from "@/components/portfolio/Background";
 import { ScrollProgress } from "@/components/portfolio/ScrollProgress";
-import { projects } from "@/data/portfolio";
+import { projects, type Project } from "@/data/portfolio";
 
 export const Route = createFileRoute("/projects/$slug")({
   head: ({ params }) => {
