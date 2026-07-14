@@ -78,8 +78,34 @@ export const experiences = [
   },
 ];
 
-export const projects = [
+export type CaseStudy = {
+  role: string;
+  timeline: string;
+  problem: string;
+  approach: { title: string; detail: string }[];
+  techStack: { group: string; items: string[] }[];
+  impact: { metric: string; label: string }[];
+  learnings: string[];
+};
+
+export type Project = {
+  slug: string;
+  title: string;
+  tagline: string;
+  image: string;
+  tags: string[];
+  challenge: string;
+  solution: string;
+  features: string[];
+  stack: string[];
+  github: string;
+  demo: string;
+  caseStudy: CaseStudy;
+};
+
+export const projects: Project[] = [
   {
+    slug: "ai-food-label-analyzer",
     title: "AI Food Label Analyzer",
     tagline: "Computer vision + LLM that decodes nutrition labels in seconds.",
     image: projectFood,
@@ -96,8 +122,47 @@ export const projects = [
     stack: ["Python", "OpenCV", "Tesseract", "OpenAI API", "Streamlit"],
     github: "https://github.com/gautami1407",
     demo: "#",
+    caseStudy: {
+      role: "Solo builder — CV pipeline, prompt design, UI",
+      timeline: "4 weeks · 2025",
+      problem:
+        "Shoppers with dietary restrictions can't quickly tell whether a packaged food fits their goals. Labels are printed in tiny type, use inconsistent units, and hide additives behind E-numbers. Existing apps rely on barcode databases that miss local Indian SKUs.",
+      approach: [
+        {
+          title: "Robust OCR pipeline",
+          detail:
+            "Preprocessed images with adaptive thresholding and perspective correction before Tesseract, boosting field extraction accuracy on curved packaging from ~62% to ~89%.",
+        },
+        {
+          title: "LLM as a structurer, not a guesser",
+          detail:
+            "Fed raw OCR text to an LLM with a strict JSON schema (calories, macros, allergens, additives) and validated the output with Pydantic — no hallucinated nutrients.",
+        },
+        {
+          title: "Goal-aware ranking",
+          detail:
+            "Users set goals (low-sugar, high-protein, gluten-free). A rules layer scores each scan 0–100 and surfaces the top two reasons behind the score.",
+        },
+      ],
+      techStack: [
+        { group: "Vision & OCR", items: ["OpenCV", "Tesseract", "Pillow"] },
+        { group: "AI", items: ["OpenAI API", "Pydantic", "Prompt templates"] },
+        { group: "App", items: ["Python", "Streamlit"] },
+      ],
+      impact: [
+        { metric: "89%", label: "Field extraction accuracy" },
+        { metric: "<3s", label: "Photo → verdict latency" },
+        { metric: "20+", label: "Products tested end-to-end" },
+      ],
+      learnings: [
+        "Deterministic validation around an LLM matters more than the model choice.",
+        "Small, focused prompts beat one giant prompt when fields are heterogeneous.",
+        "Users trusted the scan more when the app explained its reasoning.",
+      ],
+    },
   },
   {
+    slug: "staysync-hostel-management",
     title: "StaySync — Hostel Management",
     tagline: "Modern hostel ops — rooms, payments, residents, analytics.",
     image: projectStaySync,
@@ -114,8 +179,46 @@ export const projects = [
     stack: ["Next.js", "Tailwind", "MySQL", "Prisma"],
     github: "https://github.com/gautami1407",
     demo: "#",
+    caseStudy: {
+      role: "Full-stack lead — schema, API, UI, deployment",
+      timeline: "6 weeks · 2025",
+      problem:
+        "A 200-resident hostel ran on 4 shared spreadsheets and a WhatsApp group. Room double-bookings, missed rent, and lost receipts were weekly problems. Admins spent ~10 hours a week reconciling data.",
+      approach: [
+        {
+          title: "Single source of truth",
+          detail:
+            "Modeled rooms, beds, residents, and payments in a normalized Prisma schema so a bed can never be assigned twice by construction.",
+        },
+        {
+          title: "Role-scoped access",
+          detail:
+            "Admins, wardens, and residents share one app with server-side route guards — students see only their room, dues, and notices.",
+        },
+        {
+          title: "Receipts as a side effect",
+          detail:
+            "Every successful payment auto-generates a PDF receipt and emails it. No manual receipt creation.",
+        },
+      ],
+      techStack: [
+        { group: "Frontend", items: ["Next.js", "Tailwind", "shadcn/ui"] },
+        { group: "Backend", items: ["Next.js API routes", "Prisma", "MySQL"] },
+        { group: "Ops", items: ["NextAuth", "React PDF", "Vercel"] },
+      ],
+      impact: [
+        { metric: "10 hrs/wk", label: "Admin time saved" },
+        { metric: "0", label: "Double bookings after launch" },
+        { metric: "100%", label: "Digital receipts" },
+      ],
+      learnings: [
+        "Domain modeling upfront removed entire categories of bugs.",
+        "Non-technical users adopt the tool only when it's faster than the spreadsheet — not just prettier.",
+      ],
+    },
   },
   {
+    slug: "label-padega-sabh",
     title: "Label Padega Sabh",
     tagline: "Smart labeling utility for fast, consistent product tagging.",
     image: projectLabel,
@@ -127,8 +230,46 @@ export const projects = [
     stack: ["Python", "Flask", "Tesseract", "SQLite"],
     github: "https://github.com/gautami1407",
     demo: "#",
+    caseStudy: {
+      role: "Solo builder — backend + labeling UX",
+      timeline: "3 weeks · 2024",
+      problem:
+        "Small e-commerce sellers spend hours hand-tagging product photos before listing. Tagging is repetitive, inconsistent between operators, and blocks catalog uploads.",
+      approach: [
+        {
+          title: "OCR + rules pre-fill",
+          detail:
+            "Tesseract extracts text from the packaging; a rules layer maps common substrings (brand, size, category) to tags so the operator confirms rather than types.",
+        },
+        {
+          title: "Keyboard-first UI",
+          detail:
+            "Every action is one keystroke — approve, edit, skip. The whole flow stays under 5 seconds per item once trained.",
+        },
+        {
+          title: "Batch import + export",
+          detail:
+            "Operators drop 200 images at once; final tags export to a CSV ready for Shopify/Meesho catalog import.",
+        },
+      ],
+      techStack: [
+        { group: "Backend", items: ["Python", "Flask", "SQLite"] },
+        { group: "OCR", items: ["Tesseract", "OpenCV"] },
+        { group: "Frontend", items: ["Jinja", "Vanilla JS", "Tailwind"] },
+      ],
+      impact: [
+        { metric: "4×", label: "Faster tagging vs. manual" },
+        { metric: "200", label: "Images per batch upload" },
+        { metric: "1 keypress", label: "Per confirmation" },
+      ],
+      learnings: [
+        "Speed matters more than model accuracy for tools operators use all day.",
+        "A boring rules layer beat a fancier ML tagger on this dataset.",
+      ],
+    },
   },
   {
+    slug: "residential-inventory-management",
     title: "Residential Inventory Management",
     tagline: "End-to-end inventory platform for residential operations.",
     image: projectInventory,
@@ -139,8 +280,46 @@ export const projects = [
     stack: ["React", "Node.js", "Express", "MongoDB"],
     github: "https://github.com/gautami1407",
     demo: "#",
+    caseStudy: {
+      role: "Full-stack developer — 2-person team",
+      timeline: "5 weeks · 2024",
+      problem:
+        "Residential facility teams track hundreds of assets — furniture, appliances, spare parts — across floors. Records live in paper registers, so audits take days and low-stock always surprises the team.",
+      approach: [
+        {
+          title: "Asset lifecycle model",
+          detail:
+            "Each asset moves through states (in-stock → deployed → maintenance → retired) with a full history log for audits.",
+        },
+        {
+          title: "Threshold-based alerts",
+          detail:
+            "Low-stock and maintenance-due alerts fire from a nightly job so managers see a single ranked to-do list every morning.",
+        },
+        {
+          title: "Vendor + PO integration",
+          detail:
+            "Purchase orders link to vendors and update stock automatically on receipt — no double entry.",
+        },
+      ],
+      techStack: [
+        { group: "Frontend", items: ["React", "React Router", "Tailwind"] },
+        { group: "Backend", items: ["Node.js", "Express", "MongoDB", "Mongoose"] },
+        { group: "Infra", items: ["JWT", "Cron jobs", "Chart.js"] },
+      ],
+      impact: [
+        { metric: "70%", label: "Faster monthly audits" },
+        { metric: "100%", label: "Digital audit trail" },
+        { metric: "3 roles", label: "Admin, staff, vendor" },
+      ],
+      learnings: [
+        "State machines beat scattered boolean flags for lifecycle tracking.",
+        "A daily ranked alert digest was more useful than real-time notifications.",
+      ],
+    },
   },
   {
+    slug: "python-voice-assistant",
     title: "Python Voice Assistant",
     tagline: "Voice-first assistant with speech-to-text, intent routing & TTS.",
     image: projectVoice,
@@ -152,8 +331,46 @@ export const projects = [
     stack: ["Python", "SpeechRecognition", "pyttsx3", "spaCy"],
     github: "https://github.com/gautami1407",
     demo: "#",
+    caseStudy: {
+      role: "Solo builder — speech pipeline + intents",
+      timeline: "2 weeks · 2024",
+      problem:
+        "Cloud assistants send audio off-device. I wanted a privacy-preserving, fully-local assistant that could open apps, search, and do quick automations without shipping voice data anywhere.",
+      approach: [
+        {
+          title: "Local-first speech loop",
+          detail:
+            "Wake-word listener runs continuously; only the utterance after the wake word is transcribed, keeping CPU and latency low.",
+        },
+        {
+          title: "Fuzzy intent routing",
+          detail:
+            "spaCy tokens + rapidfuzz match utterances to a registered intent — 'open my mail' and 'launch gmail' hit the same handler.",
+        },
+        {
+          title: "Pluggable handlers",
+          detail:
+            "New skills are just Python functions registered by decorator, so adding a skill takes ~5 lines of code.",
+        },
+      ],
+      techStack: [
+        { group: "Speech", items: ["SpeechRecognition", "pyttsx3", "PyAudio"] },
+        { group: "NLP", items: ["spaCy", "rapidfuzz"] },
+        { group: "Automation", items: ["pyautogui", "webbrowser", "subprocess"] },
+      ],
+      impact: [
+        { metric: "100%", label: "On-device processing" },
+        { metric: "~1s", label: "Wake-to-action latency" },
+        { metric: "12", label: "Built-in intents" },
+      ],
+      learnings: [
+        "Fuzzy matching covered 80% of intent variations without training a model.",
+        "A decorator-based skill registry made experimentation delightful.",
+      ],
+    },
   },
   {
+    slug: "carebridge",
     title: "CareBridge",
     tagline: "Connecting patients with caregivers through intuitive workflows.",
     image: projectCare,
@@ -164,8 +381,46 @@ export const projects = [
     stack: ["React", "Node.js", "MongoDB", "JWT"],
     github: "https://github.com/gautami1407",
     demo: "#",
+    caseStudy: {
+      role: "Full-stack developer — 3-person team",
+      timeline: "6 weeks · 2025",
+      problem:
+        "Independent caregivers rely on phone calls and paper notes to coordinate with patients and families. Records get lost, appointments clash, and there is no shared history across visits.",
+      approach: [
+        {
+          title: "Trust-first profile design",
+          detail:
+            "Caregiver profiles surface verifications, reviews, and specialties above the booking CTA — critical for a healthcare context.",
+        },
+        {
+          title: "Slot-based booking, not calendars",
+          detail:
+            "Caregivers publish concrete time slots; families pick one — no back-and-forth, no double bookings.",
+        },
+        {
+          title: "Encrypted visit notes",
+          detail:
+            "Notes are encrypted at rest and scoped to the patient–caregiver pair, so records stay private but portable.",
+        },
+      ],
+      techStack: [
+        { group: "Frontend", items: ["React", "Tailwind", "React Query"] },
+        { group: "Backend", items: ["Node.js", "Express", "MongoDB"] },
+        { group: "Security", items: ["JWT", "bcrypt", "AES-256 notes"] },
+      ],
+      impact: [
+        { metric: "0-click", label: "Rescheduling via slot swap" },
+        { metric: "Encrypted", label: "Patient notes at rest" },
+        { metric: "3 roles", label: "Patient, caregiver, admin" },
+      ],
+      learnings: [
+        "Constraints (fixed slots) removed a whole class of scheduling bugs.",
+        "In healthcare UIs, trust signals matter as much as features.",
+      ],
+    },
   },
   {
+    slug: "ar-image-tracking",
     title: "AR Image Tracking",
     tagline: "Marker-based augmented reality experiences on the web.",
     image: projectAR,
@@ -177,6 +432,43 @@ export const projects = [
     stack: ["Three.js", "MindAR", "WebXR", "JavaScript"],
     github: "https://github.com/gautami1407",
     demo: "#",
+    caseStudy: {
+      role: "Solo builder — AR pipeline + 3D scene",
+      timeline: "2 weeks · 2024",
+      problem:
+        "Brands want AR product previews without asking users to install a native app. Existing web AR options are either too heavy on mobile or lock creators into proprietary editors.",
+      approach: [
+        {
+          title: "Marker-first tracking",
+          detail:
+            "MindAR handles feature detection on printed markers, giving stable pose on modest phones without ARCore/ARKit.",
+        },
+        {
+          title: "Lean 3D pipeline",
+          detail:
+            "Compressed glTF models with Draco + KTX2 textures kept the total download under 1.5 MB per scene.",
+        },
+        {
+          title: "Mobile-first camera UX",
+          detail:
+            "Explicit permission prompts, portrait lock, and a target overlay guide users to the marker within seconds.",
+        },
+      ],
+      techStack: [
+        { group: "AR", items: ["MindAR", "WebXR fallbacks"] },
+        { group: "3D", items: ["Three.js", "glTF + Draco", "KTX2 textures"] },
+        { group: "Web", items: ["Vanilla JS", "Vite", "PWA manifest"] },
+      ],
+      impact: [
+        { metric: "30 fps", label: "Marker tracking on mid-range phones" },
+        { metric: "<1.5 MB", label: "Total scene payload" },
+        { metric: "0 installs", label: "Runs in the browser" },
+      ],
+      learnings: [
+        "Asset compression made or broke the mobile experience.",
+        "Guided onboarding beats raw AR power for first-time users.",
+      ],
+    },
   },
 ];
 

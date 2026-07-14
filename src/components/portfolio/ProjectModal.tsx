@@ -1,9 +1,8 @@
 import { useEffect } from "react";
-import { X, Github, ArrowUpRight, Target, Lightbulb, ListChecks, Cpu } from "lucide-react";
+import { X, Github, ArrowUpRight, Target, Lightbulb, ListChecks, Cpu, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import type { projects } from "@/data/portfolio";
-
-type Project = (typeof projects)[number];
+import { Link } from "@tanstack/react-router";
+import type { Project } from "@/data/portfolio";
 
 export function ProjectModal({ project, onClose }: { project: Project | null; onClose: () => void }) {
   useEffect(() => {
@@ -86,14 +85,24 @@ export function ProjectModal({ project, onClose }: { project: Project | null; on
               </div>
 
               <div className="flex flex-wrap gap-3 pt-2">
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener"
+                <Link
+                  to="/projects/$slug"
+                  params={{ slug: project.slug }}
+                  onClick={onClose}
                   className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-secondary px-5 py-2.5 text-sm font-semibold text-primary-foreground glow-ring"
                 >
-                  Live demo <ArrowUpRight className="h-4 w-4" />
-                </a>
+                  <BookOpen className="h-4 w-4" /> Read full case study
+                </Link>
+                {project.demo && project.demo !== "#" && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-flex items-center gap-2 rounded-full glass px-5 py-2.5 text-sm font-semibold hover:text-primary transition"
+                  >
+                    Live demo <ArrowUpRight className="h-4 w-4" />
+                  </a>
+                )}
                 <a
                   href={project.github}
                   target="_blank"
