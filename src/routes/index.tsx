@@ -9,8 +9,10 @@ import { About } from "@/components/portfolio/sections/About";
 import { Experience } from "@/components/portfolio/sections/Experience";
 import { Journey } from "@/components/portfolio/sections/Journey";
 import { Skills } from "@/components/portfolio/sections/Skills";
+import { Toolbox } from "@/components/portfolio/sections/Toolbox";
 import { Projects } from "@/components/portfolio/sections/Projects";
 import { GitHubActivity } from "@/components/portfolio/sections/GitHubActivity";
+import { Notes } from "@/components/portfolio/sections/Notes";
 import { Awards } from "@/components/portfolio/sections/Awards";
 import { Leadership } from "@/components/portfolio/sections/Leadership";
 import { Gallery } from "@/components/portfolio/sections/Gallery";
@@ -57,8 +59,10 @@ function Index() {
         <Experience />
         <Journey />
         <Skills />
+        <Toolbox />
         <Projects />
         <GitHubActivity />
+        <Notes />
         <Awards />
         <Leadership />
         <Gallery />
