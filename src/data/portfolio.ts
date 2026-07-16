@@ -914,7 +914,109 @@ export const testimonials: Testimonial[] = [
     role: "Peer, VNR VJIET",
     gradient: "from-fuchsia-500/25 to-cyan-500/20",
   },
+  {
+    id: "t4",
+    quote:
+      "Rare combo — deep technical chops with genuine empathy for the people using what she builds. Every review makes the product better.",
+    name: "Design Reviewer",
+    role: "Product Sprint",
+    gradient: "from-cyan-500/25 to-primary/20",
+  },
+  {
+    id: "t5",
+    quote:
+      "Goutami is the person you want on the whiteboard at 2 AM. Calm, structured, and always three steps ahead on the architecture.",
+    name: "Fellow Intern",
+    role: "Swecha VishwaM AI",
+    gradient: "from-amber-500/25 to-rose-500/20",
+  },
+  {
+    id: "t6",
+    quote:
+      "She translates messy problems into shipped features. That's the single most underrated engineering skill and she has it.",
+    name: "Faculty Mentor",
+    role: "VNR VJIET",
+    gradient: "from-emerald-500/25 to-teal-500/20",
+  },
 ];
+
+// Notes / short writings — thoughts on engineering, AI, and building
+export type Note = {
+  id: string;
+  title: string;
+  summary: string;
+  tag: string;
+  readTime: string;
+  date: string;
+};
+
+export const notes: Note[] = [
+  {
+    id: "n1",
+    title: "Deterministic validation beats a bigger model",
+    summary:
+      "A Pydantic schema around a small LLM outperforms a giant one with no guardrails. Constrain outputs, not just prompts.",
+    tag: "AI",
+    readTime: "3 min",
+    date: "2025",
+  },
+  {
+    id: "n2",
+    title: "Domain modeling as bug prevention",
+    summary:
+      "Half the bugs I've shipped came from ambiguous state. A state machine early in the project pays for itself twice over.",
+    tag: "Engineering",
+    readTime: "4 min",
+    date: "2025",
+  },
+  {
+    id: "n3",
+    title: "Why I still love shell scripts",
+    summary:
+      "A 20-line bash script is a real deploy tool. Reach for the framework only when the script starts fighting you back.",
+    tag: "DevOps",
+    readTime: "2 min",
+    date: "2025",
+  },
+  {
+    id: "n4",
+    title: "Prompts are UI, not incantations",
+    summary:
+      "Treat every prompt like a component spec — inputs, output schema, edge cases, tests. It scales far better than clever wording.",
+    tag: "AI",
+    readTime: "5 min",
+    date: "2024",
+  },
+  {
+    id: "n5",
+    title: "Cloud isn't complicated — coupling is",
+    summary:
+      "Most 'cloud' pain is really deployment coupling. Split concerns cleanly and any provider becomes boring in the best way.",
+    tag: "Cloud",
+    readTime: "3 min",
+    date: "2024",
+  },
+  {
+    id: "n6",
+    title: "Ship the demo, then the docs",
+    summary:
+      "Hackathons taught me: a two-minute working demo unblocks a hundred future conversations. Polish comes after belief.",
+    tag: "Product",
+    readTime: "2 min",
+    date: "2024",
+  },
+];
+
+// Toolbox — tech I reach for, grouped by role
+export const toolbox = [
+  { group: "Languages", items: ["Python", "JavaScript", "TypeScript", "SQL", "Bash", "Java"] },
+  { group: "Frontend", items: ["React", "Next.js", "Tailwind", "Framer Motion", "shadcn/ui"] },
+  { group: "Backend", items: ["Node.js", "Express", "Flask", "REST APIs", "Prisma"] },
+  { group: "AI / ML", items: ["OpenAI", "LangChain", "spaCy", "Pandas", "NumPy", "Prompt Eng."] },
+  { group: "Cloud & DevOps", items: ["AWS", "Docker", "Kubernetes", "Linux", "Git", "GitHub Actions"] },
+  { group: "Data", items: ["MongoDB", "MySQL", "PostgreSQL", "SQLite", "Redis"] },
+];
+
 
 // Awards & competitions — separate from certifications
 export const awards = [
