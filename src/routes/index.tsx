@@ -39,10 +39,13 @@ export const Route = createFileRoute("/")({
         content: "Portfolio of Goutami Nuchu — AI, cloud, and full-stack engineering.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: "https://goutaminuchu.lovable.app/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "https://goutaminuchu.lovable.app/" },
+      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+    ],
   }),
   component: Index,
 });
