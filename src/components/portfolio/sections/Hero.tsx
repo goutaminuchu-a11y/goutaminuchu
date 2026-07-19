@@ -21,7 +21,7 @@ export function Hero() {
                 <span className="absolute inset-0 rounded-full bg-success animate-ping opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-success" />
               </span>
-              Available for internships & collaborations
+              Available for SDE / AI / Cloud internships · Summer 2026
             </div>
           </Reveal>
 

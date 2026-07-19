@@ -77,23 +77,74 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Gouthami's Digital Canvas is a premium, AI-powered personal portfolio website." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Gouthami's Digital Canvas is a premium, AI-powered personal portfolio website." },
+      { title: "Goutami Nuchu — Software, AI & Cloud Engineer" },
+      {
+        name: "description",
+        content:
+          "Goutami Nuchu — Software Engineer, AI Engineer, and Cloud Computing enthusiast. B.Tech CSBS at VNR VJIET. Full stack developer building AI-powered products, cloud-native apps, and production-grade software.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Goutami Nuchu, Software Engineer, AI Engineer, Cloud Computing, Full Stack Developer, Python, React, AWS, Machine Learning, VNR VJIET, Hyderabad, Portfolio",
+      },
+      { name: "author", content: "Goutami Nuchu" },
+      { name: "robots", content: "index, follow" },
+      { name: "theme-color", content: "#050816" },
+      { property: "og:title", content: "Goutami Nuchu — Software, AI & Cloud Engineer" },
+      {
+        property: "og:description",
+        content:
+          "Portfolio of Goutami Nuchu — Software Engineer, AI Engineer, and Cloud enthusiast building production-grade software.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Gouthami's Digital Canvas is a premium, AI-powered personal portfolio website." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/11298696-3ef4-46e7-9597-4fb062edf623/id-preview-3f033500--48cc8cf1-09ea-4198-ba29-60ba697a81fd.lovable.app-1782836668035.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/11298696-3ef4-46e7-9597-4fb062edf623/id-preview-3f033500--48cc8cf1-09ea-4198-ba29-60ba697a81fd.lovable.app-1782836668035.png" },
+      { property: "og:locale", content: "en_US" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Goutami Nuchu — Software, AI & Cloud Engineer" },
+      {
+        name: "twitter:description",
+        content: "Software Engineer · AI Engineer · Cloud Computing · Full Stack Developer.",
+      },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Goutami Nuchu",
+          alternateName: "Gouthami Nuchu",
+          jobTitle: "Software Engineer, AI Engineer, Cloud Computing Enthusiast",
+          email: "mailto:gouthaminurchu@gmail.com",
+          telephone: "+91-93914-90703",
+          address: { "@type": "PostalAddress", addressLocality: "Hyderabad", addressCountry: "IN" },
+          alumniOf: {
+            "@type": "CollegeOrUniversity",
+            name: "VNR Vignana Jyothi Institute of Engineering and Technology (VNR VJIET)",
+          },
+          knowsAbout: [
+            "Software Engineering",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Cloud Computing",
+            "Full Stack Development",
+            "Python",
+            "React",
+            "AWS",
+          ],
+          sameAs: [
+            "https://github.com/gautami1407",
+            "https://in.linkedin.com/in/goutami-nuchu-b780a9285",
+            "https://leetcode.com/u/gautami1407/",
+            "https://www.hackerrank.com/profile/gouthaminurchu",
+          ],
+        }),
       },
     ],
   }),

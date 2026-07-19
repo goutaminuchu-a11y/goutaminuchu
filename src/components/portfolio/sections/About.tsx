@@ -7,39 +7,42 @@ export function About() {
     <section id="about" className="relative py-24">
       <div className="mx-auto max-w-7xl px-4">
         <Reveal>
-          <SectionHeading eyebrow="About" title="Engineer, builder, perpetual student." />
+          <SectionHeading
+            eyebrow="About"
+            title="Engineer. Builder. Perpetual learner."
+            subtitle="A short story about how I got here — and where I'm headed."
+          />
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[1.4fr_1fr]">
           <Reveal>
             <div className="glass rounded-3xl p-8 lg:p-10">
               <p className="text-lg leading-relaxed text-muted-foreground">
-                My journey into engineering began with a{" "}
-                <span className="text-foreground font-medium">Diploma in Cloud Computing & Big Data</span> — where I first
-                learned how software actually runs at scale. I'm now continuing that path into a{" "}
-                <span className="text-foreground font-medium">B.Tech in Computer Science & Business Systems at VNR VJIET</span>,
-                blending engineering rigor with product thinking.
+                I'm <span className="text-foreground font-medium">Goutami Nuchu</span>, a Computer Science
+                undergraduate at <span className="text-foreground font-medium">VNR VJIET</span> pursuing a{" "}
+                <span className="text-foreground font-medium">B.Tech in Computer Science & Business Systems</span>{" "}
+                after completing a <span className="text-foreground font-medium">Diploma in Cloud Computing & Big Data</span>.
+                That foundation gave me an early appreciation for how modern software actually runs at scale — and set
+                the tone for everything I've built since.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                I'm passionate about <span className="text-primary">AI</span>,{" "}
-                <span className="text-primary">Cloud Computing</span>,{" "}
-                <span className="text-primary">Software Engineering</span>, and{" "}
-                <span className="text-primary">Full Stack Development</span> — and I learn best by building real-world
-                projects. From LLM-powered prototypes at{" "}
-                <span className="text-foreground font-medium">Swecha's VishwaM AI</span> to teaching robotics and coding to
-                students at <span className="text-foreground font-medium">STEMX Education</span>, every experience has
-                sharpened how I think and ship.
+                My work sits at the intersection of{" "}
+                <span className="text-primary">Artificial Intelligence</span>,{" "}
+                <span className="text-primary">Cloud Computing</span>, and{" "}
+                <span className="text-primary">Full Stack Development</span>. From prototyping LLM-powered workflows at{" "}
+                <span className="text-foreground font-medium">Swecha's VishwaM AI</span> to mentoring 100+ students in
+                robotics and programming at <span className="text-foreground font-medium">STEMX Education</span>, I've
+                learned to translate ideas into shipped software — and complex ideas into clear ones.
               </p>
               <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-                I'm an active participant in <span className="text-foreground font-medium">hackathons, competitions, and
-                technical communities</span> — from winning at inter-college contests to helping run the{" "}
-                <span className="text-foreground font-medium">Cloud Community Club</span> as Vice President. I care about
-                solving practical problems with technology, and I believe continuous learning and collaboration are what
-                turn a coder into an engineer.
+                I'm an active hackathon competitor, an award-winning student engineer, and Vice President of the{" "}
+                <span className="text-foreground font-medium">Cloud Community Club</span>. I believe great engineers
+                are made by <span className="text-foreground font-medium">building relentlessly, learning in public,
+                and caring deeply about the human on the other side of the screen</span>.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-2">
-                {["AI", "Cloud", "Full Stack", "Product", "Open Source", "Mentoring", "Community"].map((t) => (
+                {["AI / ML", "Cloud", "Full Stack", "Python", "React", "AWS", "Open Source", "Leadership"].map((t) => (
                   <span key={t} className="rounded-full glass px-3 py-1 text-xs text-muted-foreground">
                     <Sparkles className="mr-1 inline h-3 w-3 text-primary" />
                     {t}
