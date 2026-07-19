@@ -22,23 +22,24 @@ export const profile = {
   },
   roles: [
     "Software Engineer",
-    "Full Stack Developer",
     "AI Engineer",
+    "Full Stack Developer",
     "Cloud Computing Enthusiast",
-    "Product Builder",
     "Python Developer",
-    "Prompt Engineer",
+    "Machine Learning Practitioner",
+    "Problem Solver",
   ],
+  headline: "Software Engineer · AI · Cloud · Full Stack",
   summary:
-    "I build at the intersection of AI, cloud, and product — turning hard problems into elegant software. From training models to shipping full-stack interfaces, I care about craft, performance, and the human on the other side of the screen.",
+    "Software Engineer and Computer Science undergraduate specializing in Artificial Intelligence, Cloud Computing, and Full Stack Development. I design, build, and ship production-grade software — from LLM-powered prototypes to cloud-native web applications — with a focus on clean architecture, measurable impact, and thoughtful user experience.",
   openTo:
-    "Open to Software Engineering, AI, Cloud Computing & Full Stack Development Opportunities",
+    "Open to Software Engineering, AI/ML, Cloud, and Full Stack internship & new-grad opportunities",
   currentlyBuilding: [
     "AI-powered consumer intelligence products",
-    "Cloud-native web applications",
-    "Full Stack software solutions",
-    "AI + Computer Vision projects",
-    "Open-source learning",
+    "Cloud-native full stack applications",
+    "Computer vision & LLM experiments",
+    "Open-source contributions",
+    "Developer tooling & automations",
   ],
 };
 
