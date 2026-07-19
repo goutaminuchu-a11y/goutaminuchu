@@ -48,8 +48,11 @@ export function GitHubActivity() {
               <img
                 src={contribChart}
                 alt={`${username} GitHub contributions`}
-                className="min-w-[720px] w-full"
+                width={1200}
+                height={140}
+                className="min-w-[720px] w-full h-auto"
                 loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -58,17 +61,17 @@ export function GitHubActivity() {
         <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
           <Reveal>
             <div className="rounded-3xl glass p-4">
-              <img src={stats} alt="GitHub stats" className="w-full" loading="lazy" />
+              <img src={stats} alt="GitHub stats" width={400} height={195} className="w-full h-auto" loading="lazy" decoding="async" />
             </div>
           </Reveal>
           <Reveal>
             <div className="rounded-3xl glass p-4">
-              <img src={streakStats} alt="GitHub streaks" className="w-full" loading="lazy" />
+              <img src={streakStats} alt="GitHub streaks" width={400} height={195} className="w-full h-auto" loading="lazy" decoding="async" />
             </div>
           </Reveal>
           <Reveal>
             <div className="rounded-3xl glass p-4">
-              <img src={topLangs} alt="Top languages" className="w-full" loading="lazy" />
+              <img src={topLangs} alt="Top languages" width={400} height={195} className="w-full h-auto" loading="lazy" decoding="async" />
             </div>
           </Reveal>
         </div>
